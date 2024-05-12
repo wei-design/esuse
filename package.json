@@ -21,11 +21,13 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "lint": "eslint . --ext .js,.ts --fix --ignore-path .gitignore",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "release": "release-it"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.6.6",
         "@commitlint/config-conventional": "^17.6.6",
+        "@release-it/conventional-changelog": "^7.0.0",
         "@typescript-eslint/eslint-plugin": "^6.0.0",
         "@typescript-eslint/parser": "^6.0.0",
         "eslint": "^8.44.0",
@@ -34,6 +36,7 @@
         "husky": "^8.0.0",
         "lint-staged": "^13.2.3",
         "prettier": "^3.0.0",
+        "release-it": "^16.1.0",
         "typescript": "^5.4.5",
         "vite": "^5.2.10"
     },
