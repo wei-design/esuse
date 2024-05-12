@@ -67,7 +67,7 @@ export const imageClipboard = (options: Options = {}): Result => {
                     }
                 }
             }
-            options.success && options.success(imageRes)
+            options.success && options.success(imageRes.length ? imageRes : null)
             return Promise.resolve(imageRes.length ? imageRes : null)
         } catch (e) {
             return Promise.reject(e)
@@ -108,7 +108,7 @@ export const imagePaste = (options: Options = {}) => {
                     fileInput.files = files
                 }
                 fileInput.dispatchEvent(new Event('change'))
-                options.success && options.success(files)
+                options.success && options.success(files?.length ? files : null)
             }
         }
         window.requestAnimationFrame(() => callback())

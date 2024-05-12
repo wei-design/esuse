@@ -12,6 +12,7 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": true,
+        "jsx": "preserve",
 
         /* Linting */
         "strict": true,
@@ -19,13 +20,6 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true
     },
-    "include": [
-        "*.ts",
-        "packages",
-        "packages/.vitepress/components/*.vue",
-        "packages/.vitepress/*.ts",
-        "meta",
-        "vitest.config.ts"
-    ],
-    "exclude": ["node_modules", "**/*.md", "**/dist", "packages/.test", "packages/_docs"]
+    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+    "references": [{ "path": "./tsconfig.node.json" }]
 }

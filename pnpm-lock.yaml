@@ -1,36 +1,41 @@
 lockfileVersion: 5.4
 
-specifiers:
-  '@commitlint/cli': ^17.6.6
-  '@commitlint/config-conventional': ^17.6.6
-  '@release-it/conventional-changelog': ^7.0.0
-  '@typescript-eslint/eslint-plugin': ^6.0.0
-  '@typescript-eslint/parser': ^6.0.0
-  eslint: ^8.44.0
-  eslint-config-prettier: ^8.8.0
-  eslint-plugin-prettier: ^5.0.0
-  husky: ^8.0.0
-  lint-staged: ^13.2.3
-  prettier: ^3.0.0
-  release-it: ^16.1.0
-  typescript: ^5.4.5
-  vite: ^5.2.10
+importers:
 
-devDependencies:
-  '@commitlint/cli': 17.8.1
-  '@commitlint/config-conventional': 17.8.1
-  '@release-it/conventional-changelog': 7.0.2_release-it@16.3.0
-  '@typescript-eslint/eslint-plugin': 6.21.0_hmoy7n6el3fhw6yq6ztxxlygyu
-  '@typescript-eslint/parser': 6.21.0_te743w6atip6hhlha3uq43n2xe
-  eslint: 8.57.0
-  eslint-config-prettier: 8.10.0_eslint@8.57.0
-  eslint-plugin-prettier: 5.1.3_34agktnnehixwbhlg45dr5syfm
-  husky: 8.0.3
-  lint-staged: 13.3.0
-  prettier: 3.2.5
-  release-it: 16.3.0_typescript@5.4.5
-  typescript: 5.4.5
-  vite: 5.2.11
+  .:
+    specifiers:
+      '@commitlint/cli': ^17.6.6
+      '@commitlint/config-conventional': ^17.6.6
+      '@release-it/conventional-changelog': ^7.0.0
+      '@typescript-eslint/eslint-plugin': ^6.0.0
+      '@typescript-eslint/parser': ^6.0.0
+      eslint: ^8.44.0
+      eslint-config-prettier: ^8.8.0
+      eslint-plugin-prettier: ^5.0.0
+      husky: ^8.0.0
+      lint-staged: ^13.2.3
+      prettier: ^3.0.0
+      release-it: ^16.1.0
+      typescript: ^5.4.5
+      vite: ^5.2.10
+    devDependencies:
+      '@commitlint/cli': 17.8.1
+      '@commitlint/config-conventional': 17.8.1
+      '@release-it/conventional-changelog': 7.0.2_release-it@16.3.0
+      '@typescript-eslint/eslint-plugin': 6.21.0_hmoy7n6el3fhw6yq6ztxxlygyu
+      '@typescript-eslint/parser': 6.21.0_te743w6atip6hhlha3uq43n2xe
+      eslint: 8.57.0
+      eslint-config-prettier: 8.10.0_eslint@8.57.0
+      eslint-plugin-prettier: 5.1.3_34agktnnehixwbhlg45dr5syfm
+      husky: 8.0.3
+      lint-staged: 13.3.0
+      prettier: 3.2.5
+      release-it: 16.3.0_typescript@5.4.5
+      typescript: 5.4.5
+      vite: 5.2.11
+
+  packages/image-clipboard:
+    specifiers: {}
 
 packages:
 
@@ -3893,7 +3898,7 @@ packages:
       got: 12.6.1
       registry-auth-token: 5.0.2
       registry-url: 6.0.1
-      semver: 7.6.2
+      semver: 7.5.4
     dev: true
 
   /parent-module/1.0.1:
@@ -4382,7 +4387,7 @@ packages:
     resolution: {integrity: sha512-0Ju4+6A8iOnpL/Thra7dZsSlOHYAHIeMxfhWQRI1/VLcT3WDBZKKtQt/QkBOsiIN9ZpuvHE6cGZ0x4glCMmfiA==}
     engines: {node: '>=12'}
     dependencies:
-      semver: 7.6.2
+      semver: 7.5.4
     dev: true
 
   /semver/5.7.2:
@@ -4512,7 +4517,6 @@ packages:
   /source-map/0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
-    requiresBuild: true
     dev: true
 
   /spdx-correct/3.2.0:
@@ -4960,7 +4964,7 @@ packages:
       is-yarn-global: 0.4.1
       latest-version: 7.0.0
       pupa: 3.1.0
-      semver: 7.6.2
+      semver: 7.5.4
       semver-diff: 4.0.0
       xdg-basedir: 5.1.0
     dev: true
