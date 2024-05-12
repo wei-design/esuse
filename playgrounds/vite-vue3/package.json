@@ -9,7 +9,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "image-clipboard": "workspace:^0.0.0",
+        "image-clipboard": "file:../../packages/image-clipboard/dist",
         "vue": "^3.4.21"
     },
     "devDependencies": {
