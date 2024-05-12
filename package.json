@@ -16,17 +16,23 @@
         "require": "./dist/counter.umd.cjs"
     },
     "scripts": {
+        "prepare": "husky install",
+        "preinstall": "npx -y only-allow pnpm",
         "dev": "vite",
         "build": "tsc && vite build",
         "lint": "eslint . --ext .js,.ts --fix --ignore-path .gitignore",
         "format": "prettier --write ."
     },
     "devDependencies": {
+        "@commitlint/cli": "^17.6.6",
+        "@commitlint/config-conventional": "^17.6.6",
         "@typescript-eslint/eslint-plugin": "^6.0.0",
         "@typescript-eslint/parser": "^6.0.0",
         "eslint": "^8.44.0",
         "eslint-config-prettier": "^8.8.0",
         "eslint-plugin-prettier": "^5.0.0",
+        "husky": "^8.0.0",
+        "lint-staged": "^13.2.3",
         "prettier": "^3.0.0",
         "typescript": "^5.4.5",
         "vite": "^5.2.10"
@@ -35,6 +41,11 @@
         "*.{js,jsx,ts,tsx,vue}": [
             "npm run lint",
             "git add ."
+        ]
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
         ]
     }
 }
