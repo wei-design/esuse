@@ -31,11 +31,17 @@ onUnmounted(() => {
 
 <template>
     <div class="app">
-        <img src="/logo.png" alt="" />
-        <div>navigator.clipboard is supported: {{ isSupported }}</div>
-        <button @click="handleGetImage" class="image-clipboard">paste</button>
-        <div class="image-upload">
-            <input type="file" />
+        <img src="/logo.png" class="app-logo" alt="logo" />
+        <div class="app-inner">
+            <div class="app-col">
+                <div>navigator.clipboard is supported: {{ isSupported }}</div>
+                <button @click="handleGetImage" class="image-clipboard">paste</button>
+            </div>
+            <div class="app-col">
+                <div class="image-upload">
+                    <input type="file" />
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -47,7 +53,6 @@ onUnmounted(() => {
     border: 0;
     margin: 0;
 }
-
 .app {
     width: 100%;
     height: 100vh;
@@ -58,7 +63,27 @@ onUnmounted(() => {
     gap: 12px;
     color-scheme: light dark;
 }
-
+.app-logo {
+    width: 36px;
+    height: 36px;
+    margin: 12px;
+}
+.app-inner {
+    flex: 1;
+    height: 100%;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+.app-col {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 button {
     border-radius: 8px;
     border: 1px solid transparent;

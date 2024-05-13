@@ -6,8 +6,7 @@
         "prepare": "husky install",
         "preinstall": "npx -y only-allow pnpm",
         "lint": "eslint . --ext .js,.ts --fix --ignore-path .gitignore",
-        "format": "prettier --write .",
-        "release": "release-it"
+        "format": "prettier --write ."
     },
     "devDependencies": {
         "@commitlint/cli": "^17.6.6",
@@ -24,7 +23,8 @@
         "release-it": "^16.1.0",
         "typescript": "^5.4.5",
         "vite": "^5.2.10",
-        "vite-plugin-dts": "^3.9.1"
+        "vite-plugin-dts": "^3.9.1",
+        "vite-plugin-static-copy": "^1.0.4"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": [
