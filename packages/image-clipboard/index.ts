@@ -31,7 +31,7 @@ export interface Result {
 /**
  * @description get image from clipboard
  */
-export const imageClipboard = (options: Options = {}): Result => {
+export const useImageClipboard = (options: Options = {}): Result => {
     /**
      * @description isSupported
      * navigator.clipboard can only be used in https
@@ -81,9 +81,9 @@ export const imageClipboard = (options: Options = {}): Result => {
 }
 
 /**
- * @description get image from paste
+ * @description get image from paste event
  */
-export const imagePaste = (options: Options = {}) => {
+export const useImagePaste = (options: Options = {}) => {
     function isValidImageList(files: FileList | undefined) {
         const accepts = options.accepts
         if (accepts) {
@@ -107,8 +107,8 @@ export const imagePaste = (options: Options = {}) => {
                 } else {
                     fileInput.files = files
                 }
-                fileInput.dispatchEvent(new Event('change'))
                 options.success && options.success(files?.length ? files : null)
+                fileInput.dispatchEvent(new Event('change'))
             }
         }
         window.requestAnimationFrame(() => callback())

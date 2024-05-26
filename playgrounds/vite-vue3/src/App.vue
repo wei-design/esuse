@@ -1,24 +1,55 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted } from 'vue'
-import { imageClipboard, imagePaste } from 'image-clipboard'
+import {onMounted, onUnmounted, ref} from 'vue'
+import {useImageClipboard, useImagePaste} from 'image-clipboard'
+import {type FileItem, Message} from "@arco-design/web-vue";
 
-const { isSupported, getImage } = imageClipboard({
+const {isSupported, getImage} = useImageClipboard({
     accepts: ['png', 'jpeg'],
-    success(file) {
-        console.log(file)
-    }
+    // success(file) {
+    //     console.log(file)
+    // }
 })
+
+const imageClipboard = ref<string>('')
+const imagePaste = ref<string>('')
 const handleGetImage = () => {
-    getImage().then(res => {
-        console.log(res)
+    getImage().then(async file => {
+        imageClipboard.value = await getFileBase64(file?.[0])
     })
 }
-const { addEvent, removeEvent } = imagePaste({
+const {addEvent, removeEvent} = useImagePaste({
     accepts: ['png', 'jpeg'],
-    success(file) {
-        console.log(file)
-    }
+    // async success(file) {
+    //     console.log(file)
+    //     imagePaste.value = await getFileBase64(file?.[0])
+    // }
 })
+
+const getFileBase64 = (file: File | undefined): Promise<string> => {
+    if (!file) {
+        Message.error('no image')
+        return Promise.resolve('')
+    }
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader()
+        reader.readAsDataURL(file)
+        reader.onload = () => {
+            resolve(reader.result as string)
+        }
+        reader.onerror = (error) => {
+            reject(error)
+        }
+    })
+}
+
+const handleChange = async (fileList: FileItem[], file: FileItem) => {
+    try {
+        console.log(fileList, file)
+        imagePaste.value = await getFileBase64(file.file)
+    } catch (e) {
+        console.log(e)
+    }
+}
 
 onMounted(() => {
     addEvent()
@@ -30,20 +61,45 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div class="app">
-        <img src="/logo.png" class="app-logo" alt="logo" />
-        <div class="app-inner">
-            <div class="app-col">
-                <div>navigator.clipboard is supported: {{ isSupported }}</div>
-                <button @click="handleGetImage" class="image-clipboard">paste</button>
+    <a-layout>
+        <a-layout-sider :width="80">
+            <div class="layout-header">
+                <img src="/logo.png" alt="" class="logo"/>
+                <a href="https://github.com/wei-design/image-clipboard" target="_blank">
+                    <icon-github size="24" color="#000"/>
+                </a>
             </div>
-            <div class="app-col">
-                <div class="image-upload">
-                    <input type="file" />
+        </a-layout-sider>
+        <a-layout>
+            <a-layout-content>
+                <div class="upload-demo">
+                    <a-card title="useImageClipboard">
+                        <a-typography-paragraph>
+                            get image from clipboard
+                        </a-typography-paragraph>
+                        <a-tag :color="isSupported ? 'green' : 'orangered'">
+                            navigator.clipboard is {{ isSupported ? 'supported' : 'not supported' }}
+                        </a-tag>
+                        <a-divider/>
+                        <a-button type="primary" @click="handleGetImage" class="image-clipboard">paste</a-button>
+                        <a-divider/>
+                        <a-image :src="imageClipboard" v-show="imageClipboard"/>
+                    </a-card>
+                    <a-card title="useImagePaste">
+                        <a-typography-paragraph>
+                            get image from paste event
+                        </a-typography-paragraph>
+                        <div class="image-upload">
+                            <a-upload draggable :auto-upload="false" @change="handleChange">
+                            </a-upload>
+                        </div>
+                        <a-divider/>
+                        <a-image :src="imagePaste" v-show="imagePaste"/>
+                    </a-card>
                 </div>
-            </div>
-        </div>
-    </div>
+            </a-layout-content>
+        </a-layout>
+    </a-layout>
 </template>
 
 <style>
@@ -53,53 +109,50 @@ onUnmounted(() => {
     border: 0;
     margin: 0;
 }
-.app {
+
+#app {
     width: 100%;
     height: 100vh;
+}
+
+.arco-layout {
+    width: 100%;
+    height: 100%;
+}
+
+.layout-header {
+    height: 100%;
+    padding: 24px 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    color-scheme: light dark;
-}
-.app-logo {
-    width: 36px;
-    height: 36px;
-    margin: 12px;
-}
-.app-inner {
-    flex: 1;
-    height: 100%;
-    padding: 24px;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    align-items: center;
+
+    .logo {
+        width: 48px;
+        height: 48px;
+    }
 }
-.app-col {
-    flex: 1;
+
+.upload-demo {
     width: 100%;
+    height: 100%;
+    padding: 48px 120px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #f9f9f9;
-    cursor: pointer;
-    transition: border-color 0.25s;
-}
-button:hover {
-    border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+    align-items: center;
+    gap: 24px;
+
+    .arco-card {
+        width: 100%;
+        height: 100%;
+    }
+
+    .arco-image-img {
+        width: 100%;
+        border: 1px solid #efefef;
+        border-radius: 6px;
+        cursor: pointer;
+    }
 }
 </style>
