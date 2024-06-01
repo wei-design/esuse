@@ -1,12 +1,17 @@
 {
     "name": "wei-design",
     "private": true,
-    "version": "0.0.0",
+    "version": "0.0.1",
     "scripts": {
         "prepare": "husky install",
         "preinstall": "npx -y only-allow pnpm",
         "lint": "eslint . --ext .js,.ts --fix --ignore-path .gitignore",
         "format": "prettier --write ."
+    },
+    "homepage": "https://github.com/wei-design/image-clipboard",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wei-design/image-clipboard"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.6.6",
