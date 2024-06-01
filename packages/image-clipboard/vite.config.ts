@@ -19,6 +19,14 @@ export default defineConfig({
                 {
                     src: './package.json',
                     dest: ''
+                },
+                {
+                    src: './readme.md',
+                    dest: ''
+                },
+                {
+                    src: './readme.zh-CN.md',
+                    dest: ''
                 }
             ]
         }),

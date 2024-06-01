@@ -1,7 +1,7 @@
 {
     "name": "image-clipboard",
     "private": false,
-    "version": "0.0.1",
+    "version": "0.5.0",
     "author": "wforguo@qq.com",
     "description": "image-clipboard",
     "license": "ISC",
@@ -23,7 +23,6 @@
     },
     "scripts": {
         "build": "tsc --noEmit && vite build",
-        "release": "release-it",
-        "prepublish": "npm run build"
+        "release": "release-it"
     }
 }
