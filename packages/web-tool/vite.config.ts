@@ -1,17 +1,17 @@
+import path from 'path'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
-import pkg from './package.json'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
-
-const { name } = pkg
 
 export default defineConfig({
     build: {
         lib: {
-            entry: './index.ts',
-            name: name,
-            fileName: 'index'
-        }
+            entry: path.resolve(__dirname, 'index.ts'),
+            name: 'webTool',
+            fileName: 'index',
+            formats: ['es', 'cjs', 'iife']
+        },
+        minify: false
     },
     plugins: [
         viteStaticCopy({
@@ -21,11 +21,7 @@ export default defineConfig({
                     dest: ''
                 },
                 {
-                    src: './readme.md',
-                    dest: ''
-                },
-                {
-                    src: './readme.zh-CN.md',
+                    src: '../../readme.md',
                     dest: ''
                 }
             ]

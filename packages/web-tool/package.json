@@ -1,0 +1,36 @@
+{
+    "name": "@wei-design/web-tool",
+    "private": false,
+    "version": "0.0.1",
+    "description": "Wei Design - js tool library, @wei-design/web-tool",
+    "keywords": [
+        "Wei Design",
+        "@wei-design/web-tool",
+        "web-tool",
+        "js-tool",
+        "vite",
+        "es6"
+    ],
+    "author": "wforguo@qq.com",
+    "license": "MIT",
+    "homepage": "https://github.com/wei-design/@wei-design/web-tool",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wei-design/@wei-design/web-tool.git",
+        "directory": "packages/@wei-design/web-tool"
+    },
+    "type": "module",
+    "main": "./index.cjs",
+    "module": "./index.js",
+    "exports": {
+        "types": "./index.d.ts",
+        "import": "./index.js",
+        "require": "./index.cjs"
+    },
+    "unpkg": "./index.iife.js",
+    "jsdelivr": "./index.iife.js",
+    "scripts": {
+        "build": "tsc --noEmit && vite build",
+        "release": "release-it"
+    }
+}

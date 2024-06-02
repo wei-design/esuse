@@ -1,17 +1,16 @@
 {
     "name": "wei-design",
     "private": true,
-    "version": "0.0.1",
     "scripts": {
         "prepare": "husky install",
         "preinstall": "npx -y only-allow pnpm",
         "lint": "eslint . --ext .js,.ts --fix --ignore-path .gitignore",
         "format": "prettier --write ."
     },
-    "homepage": "https://github.com/wei-design/image-clipboard",
+    "homepage": "https://github.com/wei-design/@wei-design/web-tool",
     "repository": {
         "type": "git",
-        "url": "https://github.com/wei-design/image-clipboard"
+        "url": "https://github.com/wei-design/@wei-design/web-tool"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.6.6",
