@@ -38,7 +38,7 @@ importers:
       vite-plugin-dts: 3.9.1_yny4fwcfl3nvvqtn2njndg7dkq
       vite-plugin-static-copy: 1.0.6_vite@5.4.3
 
-  packages/web-tool:
+  packages/es-toolkit:
     specifiers: {}
 
 packages:

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import * as tool from '@wei-design/web-tool'
+import * as tool from '@wei-design/es-toolkit'
 
 console.log(tool)
 

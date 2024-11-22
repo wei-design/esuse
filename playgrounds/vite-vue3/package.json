@@ -1,5 +1,5 @@
 {
-    "name": "@wei-design/web-tool-vue3",
+    "name": "@wei-design/es-toolkit-vue3",
     "private": true,
     "type": "module",
     "scripts": {
@@ -8,7 +8,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "@wei-design/web-tool": "file:../../packages/web-tool/dist",
+        "@wei-design/es-toolkit": "file:../../packages/es-toolkit/dist",
         "vue": "^3.4.21"
     },
     "devDependencies": {

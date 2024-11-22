@@ -1,27 +1,23 @@
 {
-    "name": "@wei-design/web-tool",
+    "name": "@wei-design/es-toolkit",
     "private": false,
-    "version": "0.0.1",
-    "description": "Wei Design - js tool library, @wei-design/web-tool",
+    "version": "0.0.0",
+    "description": "Wei Design, a es toolkit, @wei-design/es-toolkit",
     "keywords": [
         "Wei Design",
-        "@wei-design/web-tool",
-        "web-tool",
+        "@wei-design/es-toolkit",
+        "es-toolkit",
         "js-tool",
         "vite",
         "es6"
     ],
     "author": "wforguo@qq.com",
     "license": "MIT",
-    "homepage": "https://github.com/wei-design/@wei-design/web-tool",
+    "homepage": "https://github.com/wei-design/@wei-design/es-toolkit",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/wei-design/@wei-design/web-tool.git",
-        "directory": "packages/@wei-design/web-tool"
-    },
-    "publishConfig": {
-        "access": "public",
-        "registry": "https://registry.npmjs.org/"
+        "url": "git+https://github.com/wei-design/@wei-design/es-toolkit.git",
+        "directory": "packages/@wei-design/es-toolkit"
     },
     "type": "module",
     "main": "./index.cjs",

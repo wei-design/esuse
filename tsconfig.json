@@ -27,7 +27,7 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
         "paths": {
-            "@wei-design/web-tool":["./packages/web-tool/index.ts"]
+            "@wei-design/es-toolkit":["./packages/es-toolkit/index.ts"]
         }
     },
     "include": [
