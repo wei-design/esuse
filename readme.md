@@ -1,20 +1,20 @@
-# @wei-design/es-toolkit
+# esuse
 
-[![@wei-design/es-toolkit](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli)
-[![@wei-design/es-toolkit](https://img.shields.io/npm/v/@wei-design/es-toolkit.svg?style=flat-square)](https://www.npmjs.org/package/@wei-design/es-toolkit)
-[![@wei-design/es-toolkit](https://img.shields.io/npm/dt/@wei-design/es-toolkit)](https://www.npmjs.org/package/@wei-design/es-toolkit)
+[![esuse](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli)
+[![esuse](https://img.shields.io/npm/v/esuse.svg?style=flat-square)](https://www.npmjs.org/package/esuse)
+[![esuse](https://img.shields.io/npm/dt/esuse)](https://www.npmjs.org/package/esuse)
 
-English | [中文](https://github.com/wei-design/@wei-design/es-toolkit/blob/master/readme.zh-CN.md)
+English | [中文](https://github.com/wei-design/esuse/blob/master/readme.zh-CN.md)
 
 ## 🚀 Intro
 
-- js tool library
+-   es toolkit
 
 ## 🦄 Usage
 
 ```ts
-import { isArray } from '@wei-design/es-toolkit';
-isArray([1, 2, 3]);
+import { isArray } from 'esuse'
+isArray([1, 2, 3])
 ```
 
 ## 📦 Install
@@ -22,36 +22,35 @@ isArray([1, 2, 3]);
 ### pnpm
 
 ```sh
-pnpm install @wei-design/es-toolkit --save
+pnpm install esuse --save
 ```
 
 ## CDN
 
 ### unpkg
 
-- browse
+-   browse
 
-https://unpkg.com/browse/@wei-design/es-toolkit/
+https://unpkg.com/browse/esuse/
 
-- script
+-   script
 
 ```
-<script src="//unpkg.com/@wei-design/es-toolkit"></script>
+<script src="//unpkg.com/esuse"></script>
 ```
 
 ### jsdelivr
 
-- browse
+-   browse
 
-https://cdn.jsdelivr.net/npm/@wei-design/es-toolkit/
+https://cdn.jsdelivr.net/npm/esuse/
 
-- script
- 
+-   script
+
 ```
-<script src="//cdn.jsdelivr.net/npm/@wei-design/es-toolkit"></script>
+<script src="//cdn.jsdelivr.net/npm/esuse"></script>
 ```
 
 ---
 
-[CHANGELOG](https://github.com/wei-design/@wei-design/es-toolkit/blob/master/packages/@wei-design/es-toolkit/CHANGELOG.md)
-
+[CHANGELOG](https://github.com/wei-design/esuse/blob/master/packages/esuse/CHANGELOG.md)

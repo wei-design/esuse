@@ -15,7 +15,7 @@ export default defineConfig(({ command }) => ({
             : {
                   alias: {
                       // development mode use local package
-                      '@wei-design/es-toolkit': resolve(__dirname, '../../packages/es-toolkit/index.ts')
+                      esuse: resolve(__dirname, '../../packages/esuse/index.ts')
                   }
               },
     define: {
@@ -29,7 +29,7 @@ export default defineConfig(({ command }) => ({
                 entryFileNames: 'js/[name]-[hash].js', // 包的入口文件名称
                 assetFileNames: '[ext]/[name]-[hash].[ext]', // 资源文件像 字体，图片等
                 manualChunks(id: any, { getModuleInfo }) {
-                    if (id.includes('@wei-design/es-toolkit')) return '@wei-design/es-toolkit'
+                    if (id.includes('esuse')) return 'esuse'
                     // 打包依赖
                     if (id.includes('node_modules')) {
                         return 'vendor'

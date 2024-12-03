@@ -5,7 +5,7 @@ module.exports = {
         node: true
     },
     extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
-    ignorePatterns: ["**/dist/**"],
+    ignorePatterns: ['**/dist/**'],
     overrides: [
         {
             env: {

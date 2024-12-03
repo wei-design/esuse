@@ -7,10 +7,10 @@
         "lint": "eslint . --ext .js,.ts --fix --ignore-path .gitignore",
         "format": "prettier --write ."
     },
-    "homepage": "https://github.com/wei-design/@wei-design/es-toolkit",
+    "homepage": "https://github.com/wei-design/esuse",
     "repository": {
         "type": "git",
-        "url": "https://github.com/wei-design/@wei-design/es-toolkit"
+        "url": "https://github.com/wei-design/esuse"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.6.6",

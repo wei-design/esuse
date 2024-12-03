@@ -1,23 +1,23 @@
 {
-    "name": "@wei-design/es-toolkit",
+    "name": "esuse",
     "private": false,
     "version": "0.0.0",
-    "description": "Wei Design, a es toolkit, @wei-design/es-toolkit",
+    "description": "Wei Design, a es toolkit, esuse",
     "keywords": [
         "Wei Design",
-        "@wei-design/es-toolkit",
+        "esuse",
         "es-toolkit",
-        "js-tool",
+        "js-toolkit",
         "vite",
         "es6"
     ],
     "author": "wforguo@qq.com",
     "license": "MIT",
-    "homepage": "https://github.com/wei-design/@wei-design/es-toolkit",
+    "homepage": "https://github.com/wei-design/esuse",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/wei-design/@wei-design/es-toolkit.git",
-        "directory": "packages/@wei-design/es-toolkit"
+        "url": "git+https://github.com/wei-design/esuse.git",
+        "directory": "packages/esuse"
     },
     "type": "module",
     "main": "./index.cjs",
