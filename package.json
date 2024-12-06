@@ -5,7 +5,9 @@
         "prepare": "husky install",
         "preinstall": "npx -y only-allow pnpm",
         "lint": "eslint . --ext .js,.ts --fix --ignore-path .gitignore",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "typecheck": "tsc --noEmit",
+        "test": "vitest"
     },
     "homepage": "https://github.com/wei-design/esuse",
     "repository": {
@@ -28,7 +30,8 @@
         "typescript": "^5.4.5",
         "vite": "^5.2.10",
         "vite-plugin-dts": "^3.9.1",
-        "vite-plugin-static-copy": "^1.0.4"
+        "vite-plugin-static-copy": "^1.0.4",
+        "vitest": "^2.1.8"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": [

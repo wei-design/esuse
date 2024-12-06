@@ -1,3 +1,2 @@
-export const getFileName = () => {
-    console.log('getFileName')
-}
+export * from './useFilenameDetails'
+export * from './usePathDetails'
