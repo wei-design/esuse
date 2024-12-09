@@ -15,7 +15,6 @@ export default mergeConfig(
             },
             // 测试覆盖率
             coverage: {
-                provider: 'istanbul', // or 'v8'
                 reporter: ['text', 'json', 'html']
             }
         }
