@@ -7,7 +7,7 @@ export default defineConfig({
     build: {
         lib: {
             entry: path.resolve(__dirname, 'index.ts'),
-            name: 'webTool',
+            name: 'esUse',
             fileName: 'index',
             formats: ['es', 'cjs', 'iife']
         },
