@@ -11,7 +11,7 @@
  * // 下载跨域图片
  * downloadImage('https://example.com/image.jpg', 'downloaded-image.jpg');
  */
-export function useImageDownload(url: string, fileName: string = 'image.png'): Promise<string> {
+export function useFileDownload(url: string, fileName: string = 'image.png'): Promise<string> {
     return new Promise((resolve, reject) => {
         const link = document.createElement('a')
 
