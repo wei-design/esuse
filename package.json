@@ -8,10 +8,7 @@
         "format": "prettier --write .",
         "typecheck": "tsc --noEmit",
         "test": "vitest",
-        "coverage": "vitest run --coverage",
-        "test:unit": "vitest --environment jsdom",
-        "test:e2e": "start-server-and-test preview http://localhost:4173/ 'cypress open --e2e'",
-        "test:e2e:ci": "start-server-and-test preview http://localhost:4173/ 'cypress run --e2e'"
+        "coverage": "vitest run --coverage"
     },
     "homepage": "https://github.com/wei-design/esuse",
     "repository": {
@@ -25,6 +22,7 @@
         "@types/jsdom": "^21.1.7",
         "@typescript-eslint/eslint-plugin": "^6.0.0",
         "@typescript-eslint/parser": "^6.0.0",
+        "@vitest/coverage-v8": "2.1.8",
         "eslint": "^8.44.0",
         "eslint-config-prettier": "^8.8.0",
         "eslint-plugin-prettier": "^5.0.0",
