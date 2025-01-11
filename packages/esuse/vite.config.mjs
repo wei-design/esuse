@@ -7,7 +7,7 @@ export default defineConfig({
     build: {
         lib: {
             entry: path.resolve(__dirname, 'index.ts'),
-            name: 'esUse',
+            name: 'EsUse',
             fileName: 'index',
             formats: ['es', 'cjs', 'iife']
         },

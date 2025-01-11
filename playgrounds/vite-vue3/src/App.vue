@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { version } from 'esuse'
+import * as esuse from 'esuse'
+
+console.log(esuse)
 
 console.log(
-    `%c Version %c ${version}`,
+    `%c Version %c ${esuse.version}`,
     'padding: 1px; border-radius: 3px 0 0 3px; color: #fff; background: #606060;',
     'padding: 1px 5px 1px 1px; border-radius: 0 3px 3px 0; color: #fff; background: #1475b2;'
 )
@@ -12,7 +14,7 @@ console.log(
     <a-layout>
         <a-layout>
             <a-layout-header class="layout-header">
-                <a-badge :text="version">
+                <a-badge :text="esuse.version">
                     <code style="padding-right: 26px">esuse</code>
                 </a-badge>
             </a-layout-header>

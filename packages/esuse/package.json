@@ -19,18 +19,20 @@
         "url": "git+https://github.com/wei-design/esuse.git",
         "directory": "packages/esuse"
     },
-    "type": "module",
-    "main": "./index.cjs",
-    "module": "./index.js",
+    "main": "./index.js",
+    "module": "./index.mjs",
     "exports": {
         "types": "./index.d.ts",
-        "import": "./index.js",
-        "require": "./index.cjs"
+        "import": "./index.mjs",
+        "require": "./index.js"
     },
     "unpkg": "./index.iife.js",
     "jsdelivr": "./index.iife.js",
     "scripts": {
         "build": "tsc --noEmit && vite build",
-        "release": "release-it"
+        "release": "release-it",
+        "release:major": "release-it major",
+        "release:minor": "release-it minor",
+        "release:patch": "release-it patch"
     }
 }
